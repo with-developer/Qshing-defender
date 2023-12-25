@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<!--
+	Landed by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+  <head>
+    <title>Qshing defender service</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" />
+    <noscript
+      ><link rel="stylesheet" href="{{ url_for('static', filename='css/noscript.css') }}"
+    /></noscript>
+
+    <style>
+      .footjob {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: #272833;
+        padding: 1px;
+        text-align: center;
+        color: white;
+        z-index: 1000;
+        margin-top:30px;
+      }
+      .footjob .icons .icon.alt {
+        text-decoration: none;
+      }
+
+      .footjob .icons .icon.alt:before {
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+        display: inline-block;
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        line-height: 1;
+        text-transform: none !important;
+        font-family: "Font Awesome 5 Free";
+        font-weight: 400;
+      }
+
+      .footjob .icons .icon.alt:before {
+        color: #272833 !important;
+        text-shadow: 1px 0 0 rgba(255, 255, 255, 0.5),
+          -1px 0 0 rgba(255, 255, 255, 0.5), 0 1px 0 rgba(255, 255, 255, 0.5),
+          0 -1px 0 rgba(255, 255, 255, 0.5);
+      }
+
+      .footjob .copyright {
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 0.8em;
+        line-height: 1em;
+        margin: 2em 0 0 0;
+        padding: 0;
+        text-align: center;
+      }
+
+      .footjob .copyright li {
+        border-left: solid 1px rgba(255, 255, 255, 0.3);
+        display: inline-block;
+        list-style: none;
+        margin-left: 1.5em;
+        padding-left: 1.5em;
+      }
+
+      .footjob .copyright li:first-child {
+        border-left: 0;
+        margin-left: 0;
+        padding-left: 0;
+      }
+
+      .footjob .copyright li a {
+        color: inherit;
+      }
+
+      h2 {
+        text-align: center;
+        color: #00a9ff;
+        font-size: 24px;
+      }
+
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      .generator2 {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .container2 {
+        text-align: center;
+        background: #494953;
+        margin: auto;
+        padding: 20px;
+        border-radius: 8px;
+        width: 500px;
+        margin-bottom: 20px;
+      }
+
+      #url {
+        font-family: Arial, sans-serif;
+        width: calc(100%);
+        box-sizing: border-box;
+        border: 1px solid #00a9ff;
+        border-radius: 4px;
+        box-sizing: border-box;
+        box-shadow: #666;
+        color: #00a9ff;
+      }
+
+      #url::placeholder {
+        color: #00a9ff;
+        font-size: 13px;
+      }
+
+      button {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        background-color: #00a9ff;
+        color: white;
+        font-weight: bold;
+        margin-bottom: 20px;
+        margin-top: 40px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #0080cc;
+      }
+
+      #qrcode {
+        margin: auto;
+        display: block;
+      }
+
+      .visitorCount {
+        position:absolute;
+        color: #666;
+      }
+      
+      .button2{
+        color:#00a9ff;
+        width:48%;
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        background-color: #00a9ff;
+        color: white;
+        font-weight: bold;
+        margin-bottom: 20px;
+        margin-top: 40px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        display: none;
+        
+      }
+      .generator3 {  
+        display: flex;
+        flex-direction: row;
+        align-items: center; 
+        justify-content: space-around;
+      }
+    </style>
+  </head>
+
+  <body class="is-preload landing">
+    <div id="page-wrapper">
+      <!-- Header -->
+      <header id="header">
+        <h1 id="logo"><a href="/">1등하면 주임님이랑 회식함</a></h1>
+        <nav id="nav">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li>
+              <a href="#">기능</a>
+              <ul>
+                <li><a href="/qrlog">QRCODE log</a></li>
+                <li>
+                  <a href="/qrcode">QRCODE generate</a>
+                </li>
+              </ul>
+            </li>
+            <li><a href="/team">팀소개</a></li>
+            <li><a href="#">admin님 환영합니다.</a></li>
+            <li><a href="#">로그아웃</a></li>
+            <!--
+            <li><a href="elements.html">Elements</a></li>
+            <li><a href="#" class="button primary">Sign Up</a></li>
+            -->
+          </ul>
+        </nav>
+      </header>
+
+      <!-- Body -->
+      <div class="generator2">
+        <div class="container2">
+          <h2>QR Code Generator</h2>
+          <input type="text"  onkeyup="enterkey()" id="url" placeholder="만들고 싶은 URL 입력"  />
+          <button onclick="generateQRCode()" >생성</button>
+          <div class="generator3">
+          <button class="button2" onclick="copyQRCodeImage()" >복사</button>
+          <button class="button2" onclick="saveQRCode()" >저장</button>
+        </div>
+          <div id="qrcode"></div>
+        </div>
+
+        <div id="visitorCount"></div>
+
+        <!-- 간단 QR생성(삭제) -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+        <!-- 이미지 추가 QR생성(삭제)  -->
+        <script src="https://cdn.jsdelivr.net/npm/easyqrcodejs@^4.4.0/dist/easy.qrcode.min.js"></script>
+
+        <script src="{{ url_for('static', filename='/js/script.js') }}"></script>
+        <script src="{{ url_for('static', filename='/js/jquery.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='/js/jquery.scrolly.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='/js/jquery.dropotron.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='/js/jquery.scrollex.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='/js/browser.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='/js/breakpoints.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='/js/util.js') }}"></script>
+        <script src="{{ url_for('static', filename='/js/main.js') }}"></script>
+      </div>
+
+      <footer class="footjob">
+        <ul class="icons">
+          <li>
+            <a
+              href="https://www.instagram.com/9d3_hwxx/"
+              class="icon brands alt fa-instagram"
+              ><span class="label">Instagram</span></a
+            >
+          </li>
+          <li>
+            <a href="https://github.com/with-developer/Qshing-defender" class="icon brands alt fa-github"
+              ><span class="label">GitHub</span></a
+            >
+          </li>
+          <li>
+            <a href="mailto:nsksjsk2@hanmail.net" class="icon solid alt fa-envelope"
+              ><span class="label">Email</span></a
+            >
+          </li>
+        </ul>
+        <ul class="copyright">
+          <li>&copy; Untitled. All rights reserved.</li>
+          <li>Develop by 1등하면 주임님이랑 회식함</li>
+        </ul>
+      </footer>
+    </div>
+  </body>
+</html>

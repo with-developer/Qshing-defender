@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<!--
+  Landed by HTML5 UP
+  html5up.net | @ajlkn
+  Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="en">
+<head>
+  <title>Qshing defender service</title>
+  <meta charset="utf-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, user-scalable=no"
+  />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" />
+  <noscript
+    ><link rel="stylesheet" href="{{ url_for('static', filename='css/noscript.css') }}"
+  /></noscript>
+
+  <style>
+  
+  </style>
+</head>
+
+<body class="is-preload landing">
+  <div id="page-wrapper">
+    <!-- Header -->
+    <header id="header">
+      <h1 id="logo"><a href="/">1등하면 주임님이랑 회식함</a></h1>
+      <nav id="nav">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li>
+            <a href="#">기능</a>
+            <ul>
+              <li><a href="/qrlog">QRCODE log</a></li>
+              <li>
+                <a href="/qrcode">QRCODE generate</a>
+              </li>
+            </ul>
+          </li>
+          <li><a href="/team">팀소개</a></li>
+          <li><a href="#">admin님 환영합니다.</a></li>
+          <li><a href="#">로그아웃</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="wrapper style">
+      <div class="container">
+        <header align="center">
+            {% if data %}
+                <table border="1">
+                    <tr>
+                        <th>Key</th>
+                        <th>URL</th>
+                    </tr>
+                    {% for item in data %}
+                    <tr>
+                        <td><a href="/qrlog?detail={{ item.key }}">{{ item.key }}</a></td>
+                        <td><a href="/qrlog?detail={{ item.key }}">{{ item.url }}</a></td>
+                    </tr>
+                    {% endfor %}
+                </table>
+                {% endif %}
+                {% if data2 %}
+                <table border="1">
+                    <tr>
+                        <th>Type</th>
+                        <th>Time</th>
+                    </tr>
+                    {% for time, log in data2.logs.items() %}
+                        {% for id, type in log.items() %}
+                        <tr>
+                            <td>{{ type }}</td>
+                            <td>{{ time }}</td>
+                        </tr>
+                        {% endfor %}
+                    {% endfor %}
+                </table>
+                {% endif %}
+
+          </div>
+        </header>
+        <br/>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+      <ul class="icons">
+        <li>
+          <a
+            href="https://www.instagram.com/9d3_hwxx/"
+            class="icon brands alt fa-instagram"
+          ><span class="label">Instagram</span></a
+          >
+        </li>
+        <li>
+          <a href="https://github.com/with-developer/Qshing-defender" class="icon brands alt fa-github"
+            ><span class="label">GitHub</span></a
+          >
+        </li>
+        <li>
+          <a href="mailto:nsksjsk2@hanmail.net" class="icon solid alt fa-envelope"
+            ><span class="label">Email</span></a
+          >
+        </li>
+      </ul>
+      <ul class="copyright">
+        <li>&copy; Untitled. All rights reserved.</li>
+        <li>Develop by 1등하면 주임님이랑 회식함</li>
+      </ul>
+    </footer>
+  </div>
+
+  <!-- Scripts -->
+  <script src="{{ url_for('static', filename='/js/jquery.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='/js/jquery.scrolly.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='/js/jquery.dropotron.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='/js/jquery.scrollex.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='/js/browser.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='/js/breakpoints.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='/js/util.js') }}"></script>
+  <script src="{{ url_for('static', filename='/js/main.js') }}"></script>
+</body>
+</html>
+
+
+

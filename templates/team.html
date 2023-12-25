@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<!--
+	Landed by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+  <head>
+    <title>Qshing defender service</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" />
+    <noscript
+      ><link rel="stylesheet" href="{{ url_for('static', filename='css/noscript.css') }}"
+    /></noscript>
+  </head>
+
+  <body class="is-preload landing">
+    <div id="page-wrapper">
+      <!-- Header -->
+      <header id="header">
+        <h1 id="logo"><a href="/">1등하면 주임님이랑 회식함</a></h1>
+        <nav id="nav">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li>
+              <a href="#">기능</a>
+              <ul>
+                <li><a href="/qrlog">QRCODE log</a></li>
+                <li>
+                  <a href="/qrcode">QRCODE generate</a>
+                </li>
+              </ul>
+            </li>
+            <li><a href="/team">팀소개</a></li>
+            <li><a href="#">admin님 환영합니다.</a></li>
+            <li><a href="#">로그아웃</a></li>
+            <!--
+            <li><a href="elements.html">Elements</a></li>
+            <li><a href="#" class="button primary">Sign Up</a></li>
+            -->
+          </ul>
+        </nav>
+      </header>
+
+      <div class="wrapper style">
+        <div class="container">
+          <header align="center">
+            <h2>팀소개</h2>
+            <p>
+              '1등하면 주임님이랑 회식함' 팀은 <br />
+              두지수,박경호,이경찬,이준형,허현 으로 구성되며, <br />
+              1등 후 상금으로 주임님과 회식을 <br />
+              목표로 하고 있습니다.
+            </p>
+          </header>
+          <br />
+          <div class="red-line"></div>
+        </div>
+
+        <p></p>
+      </div>
+
+      <div class="team-image-left">
+        <img src="{{ url_for('static', filename='/images/두지수.png') }}" alt="" height="25%" width="25%" />
+        <span class="team-introduce-left">
+          <h2>
+            이름 : 두지수 <br /> MBTI : ESTJ
+          </h2>
+        </span>
+      </div>
+
+      <div class="team-image-right">
+        <span class="team-introduce-right">
+          <h2>
+            이름 : 박경호<br /> MBTI : INFJ
+          </h2>
+        </span>
+        <img src="{{ url_for('static', filename='/images/박경호.png') }}" alt="" height="25%" width="25%" />
+      </div>
+
+      <div class="team-image-left">
+        <img src="{{ url_for('static', filename='/images/이경찬.png') }}" alt="" height="25%" width="25%" />
+        <span class="team-introduce-left">
+          <h2>
+            이름 : 이경찬<br /> MBTI :ESTP
+          </h2>
+        </span>
+      </div>
+
+      <div class="team-image-right">
+        <span class="team-introduce-right">
+          <h2>
+            이름 : 이준형<br /> MBTI : INFP
+          </h2>
+        </span>
+        <img src="{{ url_for('static', filename='/images/준햄.png') }}" alt="" height="25%" width="25%" />
+      </div>
+
+      <div class="team-image-left">
+        <img src="{{ url_for('static', filename='/images/현햄.png') }}" alt="" height="25%" width="25%" />
+        <span class="team-introduce-left">
+          <h2>
+            이름 : 허현<br /> MBTI : ENTP
+          </h2>
+        </span>
+      </div>
+
+      <!-- Footer -->
+      <footer id="footer">
+        <ul class="icons">
+          <li>
+            <a
+              href="https://www.instagram.com/9d3_hwxx/"
+              class="icon brands alt fa-instagram"
+              ><span class="label">Instagram</span></a
+            >
+          </li>
+          <li>
+            <a href="https://github.com/with-developer/Qshing-defender" class="icon brands alt fa-github"
+              ><span class="label">GitHub</span></a
+            >
+          </li>
+          <li>
+            <a href="mailto:nsksjsk2@hanmail.net" class="icon solid alt fa-envelope"
+              ><span class="label">Email</span></a
+            >
+          </li>
+        </ul>
+        <ul class="copyright">
+          <li>&copy; Untitled. All rights reserved.</li>
+          <li>Develop by 1등하면 주임님이랑 회식함</li>
+        </ul>
+      </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="{{ url_for('static', filename='/js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='/js/jquery.scrolly.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='/js/jquery.dropotron.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='/js/jquery.scrollex.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='/js/browser.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='/js/breakpoints.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='/js/util.js') }}"></script>
+    <script src="{{ url_for('static', filename='/js/main.js') }}"></script>
+  </body>
+</html>
